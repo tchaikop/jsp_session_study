@@ -16,8 +16,15 @@
 	if(mid.equals("tiger") && mpw.equals("12345")) {  // 참이면 로그인성공
 		// 로그인 한 유저를 로그인 시켜야 한다
 		// session에 로그인한 유저의 아이디를 저장 시켜야 한다
-		session.setAttribute("sessionid", mid);// 첫 번째는 세션의 이름(문자열), 두번째 인수는 로그인한 유저의 아이디값
+		session.setAttribute("sessionId", mid);// 첫 번째는 세션의 이름(문자열), 두번째 인수는 로그인한 유저의 아이디값
+		//세션-> 서버의 메모리에 자동생성
+		//기본적으로 웹브라우저에 중복되지 않은 번호 부여함
+		//기본적으로 서버에서 부여한 웹브리우저번호(jsessionId)와 함께 로그인한 유저의 아이디가 저장
+		response.sendRedirect("loginSuccess.jsp");
 		
+	}else {
+		// 다시 로그인 화면으로 보내기
+		response.sendRedirect("login.jsp");
 	}
 	
 %>

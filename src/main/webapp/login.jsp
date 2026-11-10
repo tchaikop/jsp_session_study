@@ -13,7 +13,7 @@
 <form action="loginok.jsp" method="get">
 	아이디: <input type="text" name="mid"><br><br>
 	비밀번호: <input type="password" name="mpw"><br><br>
-	<inout type="submit" value="로그인">
+	<input type="submit" value="로그인">
 	
 
 </form>
